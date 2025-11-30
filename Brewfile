@@ -23,6 +23,9 @@ brew "zsh-autosuggestions"
 # Interactive filtering tool
 brew "peco"
 
+# Python version management
+brew "pyenv"
+
 # Modern Unix tools
 brew "ripgrep"    # Better grep (rg)
 brew "fd"         # Better find
@@ -45,38 +48,10 @@ brew "zip"
 # Optional: Add your commonly used tools here
 # ============================================
 
-# Programming languages (uncomment as needed)
-# brew "node"
-# brew "python@3.11"
-# brew "go"
-# brew "rust"
-
 # AWS tools (uncomment if needed)
-# brew "awscli"
-# brew "aws-sam-cli"
+brew "awscli"
+brew "aws-sam-cli"
 
-# Container tools (uncomment if needed)
-# brew "docker"
-# brew "docker-compose"
+# Google Cloud SDK (uncomment if needed)
+brew "google-cloud-sdk"
 
-# ============================================
-# GUI Applications (Casks)
-# ============================================
-
-# Browsers
-# cask "google-chrome"
-# cask "firefox"
-
-# Development
-# cask "visual-studio-code"
-# cask "iterm2"
-# cask "docker"
-
-# Productivity
-# cask "alfred"
-# cask "notion"
-# cask "slack"
-
-# Media
-# cask "spotify"
-# cask "vlc"

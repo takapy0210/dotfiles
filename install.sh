@@ -67,6 +67,33 @@ else
     echo -e "${GREEN}✓ Oh My Zsh is already installed${NC}"
 fi
 
+# Setup pyenv and install Python 3.13
+if command -v pyenv &> /dev/null; then
+    echo -e "\n${GREEN}Setting up pyenv and Python 3.13...${NC}"
+
+    # Initialize pyenv for this script
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+
+    # Check if Python 3.13 is already installed
+    if pyenv versions | grep -q "3.13"; then
+        echo -e "${GREEN}✓ Python 3.13 is already installed${NC}"
+    else
+        echo -e "${YELLOW}Installing Python 3.13 (this may take a few minutes)...${NC}"
+        pyenv install 3.13
+    fi
+
+    # Set Python 3.13 as global default
+    echo -e "${GREEN}Setting Python 3.13 as global default...${NC}"
+    pyenv global 3.13
+
+    echo -e "${GREEN}✓ Python version: $(pyenv version)${NC}"
+else
+    echo -e "${YELLOW}pyenv not found. Skipping Python installation.${NC}"
+fi
+
 # Create symlinks for shell configuration
 echo -e "\n${GREEN}Creating symlinks for shell configuration...${NC}"
 create_symlink "$DOTFILES_DIR/shell/.zshrc" "$HOME/.zshrc"

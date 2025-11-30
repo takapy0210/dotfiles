@@ -60,7 +60,8 @@ cd dotfiles
 2. Homebrewのインストール (未インストールの場合)
 3. Brewfileからパッケージをインストール
 4. Oh My Zshのインストール (未インストールの場合)
-5. 設定ファイルのシンボリックリンク作成
+5. pyenvとPython 3.13のインストール・設定
+6. 設定ファイルのシンボリックリンク作成
 
 ### 3. ローカル設定ファイルの作成 (オプション)
 
@@ -96,6 +97,7 @@ source ~/.zshrc
 - **シェルツール**: zsh, peco, fzf
 - **モダンUNIXツール**: ripgrep, fd, bat, exa
 - **Git関連**: git, gh (GitHub CLI)
+- **Python**: pyenv (Python 3.13がデフォルトでインストール)
 - **その他**: jq, yq, tree
 
 ### パッケージの追加
@@ -236,6 +238,43 @@ cd ~/dotfiles/config/vscode
 ```bash
 # extensions.txtから直接インストール
 cat ~/dotfiles/config/vscode/extensions.txt | grep -v "^#" | xargs -L 1 code --install-extension
+```
+
+### Python環境の管理
+
+このdotfilesではpyenvを使用してPythonバージョンを管理します。
+
+#### インストール済みのPythonバージョンを確認
+
+```bash
+pyenv versions
+```
+
+#### 別のPythonバージョンをインストール
+
+```bash
+# 利用可能なバージョンを確認
+pyenv install --list
+
+# 特定のバージョンをインストール
+pyenv install 3.12.0
+```
+
+#### デフォルトのPythonバージョンを変更
+
+```bash
+# グローバル（システム全体）のデフォルトを変更
+pyenv global 3.13
+
+# 現在のディレクトリ配下のみで使用するバージョンを指定
+pyenv local 3.12.0
+```
+
+#### Pythonバージョンの確認
+
+```bash
+python --version
+which python
 ```
 
 ## トラブルシューティング
