@@ -1,0 +1,43 @@
+# ============================================
+# dotfiles repository .gitignore
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Local configuration files (contains sensitive information)
+*.local
+.zshrc.local
+.bashrc.local
+
+# SSH private keys
+config/ssh/id_*
+config/ssh/*.pem
+config/ssh/known_hosts
+
+# Environment files
+.env
+.env.*
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+
+# VSCode workspace files
+*.code-workspace
+
+# Personal notes
+NOTES.md
+TODO.md

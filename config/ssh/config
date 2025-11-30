@@ -1,0 +1,64 @@
+# ============================================
+# SSH Configuration
+# ============================================
+
+# Global settings
+Host *
+    # Use SSH keys from macOS keychain
+    UseKeychain yes
+    AddKeysToAgent yes
+
+    # Keep connection alive
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+    # Security settings
+    ForwardAgent no
+    ForwardX11 no
+
+    # Connection settings
+    Compression yes
+    TCPKeepAlive yes
+
+    # Reuse connections
+    ControlMaster auto
+    ControlPath ~/.ssh/control-%r@%h:%p
+    ControlPersist 600
+
+# ============================================
+# Example Hosts Configuration
+# ============================================
+
+# GitHub
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
+# Example: Personal Server
+# Host myserver
+#     HostName example.com
+#     User username
+#     Port 22
+#     IdentityFile ~/.ssh/id_rsa
+#     ForwardAgent no
+
+# Example: AWS EC2 Instance
+# Host aws-prod
+#     HostName ec2-xx-xx-xx-xx.compute.amazonaws.com
+#     User ec2-user
+#     IdentityFile ~/.ssh/aws-key.pem
+#     Port 22
+
+# Example: Jump Host (Bastion)
+# Host bastion
+#     HostName bastion.example.com
+#     User jumpuser
+#     IdentityFile ~/.ssh/bastion_key
+#
+# Host private-server
+#     HostName 10.0.1.100
+#     User privateuser
+#     ProxyJump bastion
+#     IdentityFile ~/.ssh/private_key

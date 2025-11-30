@@ -1,0 +1,39 @@
+# ============================================
+# Local Configuration Template
+# ============================================
+# This file is for machine-specific or private settings.
+# Copy this file to ~/.zshrc.local and customize it.
+#
+# cp ~/.dotfiles/shell/.zshrc.local.example ~/.zshrc.local
+#
+# NOTE: .zshrc.local is NOT tracked by git and contains sensitive information.
+
+# ============================================
+# Private Environment Variables
+# ============================================
+
+# GitHub Configuration
+# export GITHUB_USER="your-username"
+# export GITHUB_ACCESS_TOKEN="your-personal-access-token"
+
+# AWS Configuration
+# export AWS_PROFILE="default"
+# export AWS_DEFAULT_REGION="ap-northeast-1"
+
+# Other API Keys
+# export OPENAI_API_KEY="your-api-key"
+# export ANTHROPIC_API_KEY="your-api-key"
+
+# ============================================
+# Machine-Specific PATH
+# ============================================
+
+# Add any machine-specific paths here
+# export PATH="/custom/path:$PATH"
+
+# ============================================
+# Machine-Specific Aliases
+# ============================================
+
+# Add any machine-specific aliases here
+# alias work-project="cd ~/work/important-project"

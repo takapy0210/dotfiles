@@ -1,0 +1,87 @@
+[user]
+	name = takapy
+	email = takanobu.030210@gmail.com
+
+[core]
+	editor = code --wait
+	ignorecase = false
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	quotepath = false
+
+[init]
+	defaultBranch = main
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+
+[push]
+	default = simple
+	followTags = true
+
+[pull]
+	rebase = false
+
+[fetch]
+	prune = true
+
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
+[merge]
+	conflictstyle = diff3
+
+[rebase]
+	autostash = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+	# Status & Info
+	st = status -sb
+	br = branch
+	co = checkout
+
+	# Logs
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lol = log --graph --decorate --oneline
+	lola = log --graph --decorate --oneline --all
+
+	# Commit
+	ci = commit
+	cm = commit -m
+	ca = commit --amend
+
+	# Diff
+	df = diff
+	dfc = diff --cached
+
+	# Add
+	aa = add --all
+	ap = add -p
+
+	# Undo
+	unstage = reset HEAD --
+	undo = reset --soft HEAD~1
+
+	# Branch management
+	cleanup = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+	# Stash
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+
+	# Show
+	last = log -1 HEAD
+
+	# Remote
+	rv = remote -v

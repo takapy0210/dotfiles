@@ -1,0 +1,146 @@
+{
+  // ============================================
+  // Editor Settings
+  // ============================================
+  "editor.formatOnSave": true,
+  "editor.mouseWheelZoom": true,
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.lineHeight": 22,
+  "editor.minimap.enabled": true,
+  "editor.renderWhitespace": "selection",
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "off",
+
+  // ============================================
+  // File Settings
+  // ============================================
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/node_modules": true
+  },
+
+  // ============================================
+  // Workbench Settings
+  // ============================================
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+
+  // ============================================
+  // Terminal Settings
+  // ============================================
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.env.osx": {},
+
+  // ============================================
+  // Git Settings
+  // ============================================
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+
+  // ============================================
+  // GitHub Settings
+  // ============================================
+  "githubPullRequests.fileListLayout": "flat",
+  "githubPullRequests.pullBranch": "never",
+
+  // ============================================
+  // Security Settings
+  // ============================================
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ============================================
+  // Explorer Settings
+  // ============================================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // ============================================
+  // Diff Editor Settings
+  // ============================================
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ============================================
+  // Language-specific Settings
+  // ============================================
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false
+  },
+
+  // ============================================
+  // Python Settings
+  // ============================================
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "120"],
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=120",
+    "--max-complexity=20"
+  ],
+
+  // ============================================
+  // Prettier Settings
+  // ============================================
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+
+  // ============================================
+  // AWS Settings
+  // ============================================
+  "aws.telemetry": false,
+
+  // ============================================
+  // GitHub Copilot Settings (if installed)
+  // ============================================
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.editor.enableAutoCompletions": true
+}
