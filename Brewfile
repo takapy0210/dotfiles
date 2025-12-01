@@ -1,10 +1,4 @@
 # Homebrew Bundle file
-# Usage: brew bundle
-
-# Tap repositories
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 
 # ============================================
 # Development Tools
@@ -30,7 +24,6 @@ brew "pyenv"
 brew "ripgrep"    # Better grep (rg)
 brew "fd"         # Better find
 brew "bat"        # Better cat with syntax highlighting
-brew "exa"        # Better ls
 brew "fzf"        # Fuzzy finder
 brew "tree"       # Directory tree viewer
 brew "jq"         # JSON processor
@@ -53,5 +46,5 @@ brew "awscli"
 brew "aws-sam-cli"
 
 # Google Cloud SDK (uncomment if needed)
-brew "google-cloud-sdk"
+cask "google-cloud-sdk"
 
