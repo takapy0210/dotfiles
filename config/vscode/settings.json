@@ -142,5 +142,6 @@
     "markdown": false,
     "scminput": false
   },
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true
 }
