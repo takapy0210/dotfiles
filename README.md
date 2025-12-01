@@ -58,10 +58,14 @@ cd dotfiles
 
 1. 既存の設定ファイルをバックアップ
 2. Homebrewのインストール (未インストールの場合)
-3. Brewfileからパッケージをインストール
+3. Brewfileからパッケージをインストール (MesloLGS Nerd Font含む)
 4. Oh My Zshのインストール (未インストールの場合)
-5. pyenvとPython 3.13のインストール・設定
-6. 設定ファイルのシンボリックリンク作成
+5. Oh My Zshカスタムプラグインのインストール
+   - zsh-autosuggestions
+   - zsh-syntax-highlighting
+   - Powerlevel10k テーマ
+6. pyenvとPython 3.13のインストール・設定
+7. 設定ファイルのシンボリックリンク作成
 
 ### 3. ローカル設定ファイルの作成 (オプション)
 
@@ -81,7 +85,34 @@ export GITHUB_ACCESS_TOKEN="your-token"
 
 **重要**: `.zshrc.local`はGitで管理されません（.gitignoreに含まれています）
 
-### 4. ターミナルを再起動
+### 4. Powerlevel10kのフォント設定
+
+インストールスクリプトを実行すると、Powerlevel10kテーマとMesloLGS Nerd Fontが自動的にインストールされます。
+アイコンを正しく表示するため、使用しているターミナルアプリでフォントを設定してください。
+
+#### iTerm2の場合
+
+1. iTerm2 → Settings (⌘,)
+2. **Profiles** → **Text** タブ
+3. **Font** → **MesloLGS Nerd Font** を選択
+4. サイズは12-14程度に設定（お好みで調整）
+
+#### macOS Terminal.appの場合
+
+1. Terminal → Settings (⌘,)
+2. **Profiles** → **Text** タブ
+3. **Font** → **Change** ボタンをクリック
+4. **MesloLGS Nerd Font** を選択してサイズを12-14に設定
+
+#### VSCode統合ターミナルの場合
+
+VSCodeの設定ファイル ([config/vscode/settings.json](config/vscode/settings.json)) に既に設定済みです:
+
+```json
+"terminal.integrated.fontFamily": "MesloLGS Nerd Font"
+```
+
+### 5. ターミナルを再起動
 
 ```bash
 # または
@@ -287,12 +318,38 @@ ls -la ~ | grep "^l"
 
 ### zshプラグインが動作しない場合
 
+プラグインがエラーで読み込まれない場合は、再度インストールスクリプトを実行してください:
+
 ```bash
-# Oh My Zshのプラグインを再インストール
-cd ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting
+./install.sh
 ```
+
+または手動でプラグインを再インストール:
+
+```bash
+# zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+### Powerlevel10kのアイコンが文字化けする場合
+
+ターミナルのフォント設定を確認してください。フォントが **MesloLGS Nerd Font** に設定されていることを確認します。
+
+```bash
+# フォントが正しくインストールされているか確認
+brew list --cask | grep font-meslo
+
+# フォントが見つからない場合は再インストール
+brew install --cask font-meslo-lg-nerd-font
+```
+
+その後、使用しているターミナルアプリ（iTerm2、Terminal.app、VSCodeなど）でフォント設定を変更してください。詳細は「4. Powerlevel10kのフォント設定」セクションを参照してください。
 
 ### VSCode設定が反映されない場合
 
