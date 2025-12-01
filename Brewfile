@@ -48,3 +48,10 @@ brew "aws-sam-cli"
 # Google Cloud SDK (uncomment if needed)
 cask "google-cloud-sdk"
 
+# Other useful applications
+cask "jordanbaird-ice"  # Ice for macOS
+
+
+# ============================================
+# End of Brewfile
+# ============================================
