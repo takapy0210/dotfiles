@@ -41,6 +41,12 @@ dotfiles/
 
 ## インストール方法
 
+### 0. Githubとの連携
+
+認証含めて以下の記事通りにやるのが良い
+
+<https://zenn.dev/lovegraph/articles/529fe37caa3f19>
+
 ### 1. リポジトリをクローン
 
 ```bash
@@ -144,6 +150,7 @@ brew bundle --file=~/dotfiles/Brewfile
 ### シェル設定
 
 #### `.zshrc`
+
 - Oh My Zshの設定
 - pecoによる履歴検索 (Ctrl+R)
 - pecoによるGitブランチ選択 (Ctrl+G)
@@ -151,12 +158,14 @@ brew bundle --file=~/dotfiles/Brewfile
 - モダンなUNIXツールの統合
 
 #### `.bashrc` / `.bash_profile`
+
 - Bash使用時の設定
 - 基本的なエイリアスとプロンプト
 
 ### Git設定
 
 #### `.gitconfig`
+
 - ユーザー情報
 - エディタ設定 (VSCode)
 - 便利なエイリアス
@@ -165,6 +174,7 @@ brew bundle --file=~/dotfiles/Brewfile
   - `git cleanup` → マージ済みブランチの削除
 
 #### `.gitignore_global`
+
 - グローバルで無視するファイル
 - macOS固有ファイル (.DS_Store等)
 - エディタ設定ファイル
@@ -173,6 +183,7 @@ brew bundle --file=~/dotfiles/Brewfile
 ### VSCode設定
 
 #### `settings.json`
+
 - エディタの基本設定
 - 言語別のフォーマッタ設定
 - Python, JavaScript, TypeScript等の設定
@@ -190,6 +201,7 @@ brew bundle --file=~/dotfiles/Brewfile
 ### SSH設定
 
 #### `config/ssh/config`
+
 - SSH接続の設定
 - GitHub用の設定
 - サーバー接続のテンプレート
