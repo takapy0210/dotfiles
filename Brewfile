@@ -14,6 +14,9 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 
+# Fonts for Powerlevel10k
+cask "font-meslo-lg-nerd-font"
+
 # Interactive filtering tool
 brew "peco"
 

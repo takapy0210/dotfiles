@@ -67,6 +67,36 @@ else
     echo -e "${GREEN}✓ Oh My Zsh is already installed${NC}"
 fi
 
+# Install Oh My Zsh custom plugins and themes
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
+
+# Install zsh-autosuggestions
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]; then
+    echo -e "${YELLOW}Installing zsh-autosuggestions...${NC}"
+    git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+    echo -e "${GREEN}✓ zsh-autosuggestions installed${NC}"
+else
+    echo -e "${GREEN}✓ zsh-autosuggestions is already installed${NC}"
+fi
+
+# Install zsh-syntax-highlighting
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
+    echo -e "${YELLOW}Installing zsh-syntax-highlighting...${NC}"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+    echo -e "${GREEN}✓ zsh-syntax-highlighting installed${NC}"
+else
+    echo -e "${GREEN}✓ zsh-syntax-highlighting is already installed${NC}"
+fi
+
+# Install Powerlevel10k theme
+if [ ! -d "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
+    echo -e "${YELLOW}Installing Powerlevel10k theme...${NC}"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+    echo -e "${GREEN}✓ Powerlevel10k installed${NC}"
+else
+    echo -e "${GREEN}✓ Powerlevel10k is already installed${NC}"
+fi
+
 # Setup pyenv and install Python 3.13
 if command -v pyenv &> /dev/null; then
     echo -e "\n${GREEN}Setting up pyenv and Python 3.13...${NC}"
