@@ -14,9 +14,11 @@
   "editor.lineHeight": 22,
   "editor.minimap.enabled": true,
   "editor.renderWhitespace": "selection",
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.wordWrap": "off",
-
   // ============================================
   // File Settings
   // ============================================
@@ -31,50 +33,42 @@
     "**/*.pyc": true,
     "**/node_modules": true
   },
-
   // ============================================
   // Workbench Settings
   // ============================================
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
-
   // ============================================
   // Terminal Settings
   // ============================================
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.env.osx": {},
-
   // ============================================
   // Git Settings
   // ============================================
   "git.confirmSync": false,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-
   // ============================================
   // GitHub Settings
   // ============================================
   "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullBranch": "never",
-
   // ============================================
   // Security Settings
   // ============================================
   "security.workspace.trust.untrustedFiles": "open",
-
   // ============================================
   // Explorer Settings
   // ============================================
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-
   // ============================================
   // Diff Editor Settings
   // ============================================
   "diffEditor.ignoreTrimWhitespace": false,
-
   // ============================================
   // Language-specific Settings
   // ============================================
@@ -109,20 +103,21 @@
       "other": "off"
     }
   },
-
   // ============================================
   // Python Settings
   // ============================================
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length", "120"],
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "120"
+  ],
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
     "--max-line-length=120",
     "--max-complexity=20"
   ],
-
   // ============================================
   // Prettier Settings
   // ============================================
@@ -131,12 +126,10 @@
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
-
   // ============================================
   // AWS Settings
   // ============================================
   "aws.telemetry": false,
-
   // ============================================
   // GitHub Copilot Settings (if installed)
   // ============================================
@@ -148,5 +141,9 @@
   },
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "default",
+  "claudeCode.environmentVariables": [
+  
+  ]
 }
