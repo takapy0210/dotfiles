@@ -45,6 +45,7 @@ brew "node"       # Node.js runtime
 # ============================================
 # Optional: Add your commonly used tools here
 # ============================================
+brew "terminal-notifier"
 
 # AWS tools (uncomment if needed)
 brew "awscli"
